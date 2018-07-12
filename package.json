@@ -17,6 +17,7 @@
   "homepage": "https://github.com/iamchristopher/trekker#readme",
   "scripts": {
     "build": "rollup -c",
+    "prepare": "npm run build",
     "test": "BABEL_ENV=test nyc mocha --require babel-core/register"
   },
   "devDependencies": {

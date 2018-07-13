@@ -27,6 +27,16 @@ describe('Trekker', () => {
         should.equal(actual, expected);
     });
 
+    it('Should path diagonally', () => {
+        const expected = '[1,0]';
+        const actual = new Trekker(grid)
+            .enableDiagonal(true)
+            .search(0, 1, 1, 0)
+            .toString();
+
+        should.equal(actual, expected);
+    });
+
     it('Should avoid walls', () => {
         const expected = '[0,1],[0,2],[1,2],[2,2]';
         const actual = new Trekker(grid)

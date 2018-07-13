@@ -48,7 +48,7 @@ describe('Trekker', () => {
     it('Should accept custom neighbour processing', () => {
         const expected = '[0,1],[0,0],[1,0],[2,0],[2,1],[2,2]';
         const actual = new Trekker(grid)
-            .processAdjacent((current, neighbour) => neighbour.weight !== 2)
+            .processNeighbour((current, neighbour) => neighbour.weight !== 2)
             .search(0, 2, 2, 2)
             .toString();
 

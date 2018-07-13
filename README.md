@@ -32,7 +32,7 @@ The goal of the public API is to be chainable in any configuration. A notable ex
 
 **Returns** an `Array` of `Node`s representing the solution path. If no path is found, an empty `Array` is returned.
 
-### `Trekker.processAdjacent(fn)`
+### `Trekker.processNeighbour(fn)`
 #### Arguments
 * **fn(current, neighbour): Boolean** (Function) &mdash; A custom function to use for additional consideration when processing a neighbour tile
 

@@ -1,4 +1,4 @@
-# Trekker
+# Trekker  [![Coverage Status](https://coveralls.io/repos/github/iamchristopher/trekker/badge.svg?branch=master)](https://coveralls.io/github/iamchristopher/trekker?branch=master)
 _Note: Trekker is currently in a prerelease state and is therefore subject to frequent (sometimes undocumented) breaking changes._
 
 ## Installation

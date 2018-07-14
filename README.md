@@ -32,6 +32,16 @@ The goal of the public API is to be chainable in any configuration. A notable ex
 
 **Returns** an `Array` of `Node`s representing the solution path. If no path is found, an empty `Array` is returned.
 
+### `Trekker.setDiagonalMode(mode)`
+#### Arguments
+* **mode** (Number) &mdash; A value representing the diagonal mode to use. The following options are available from `Trekker.DIAGONAL_MODE`:  
+  * `NEVER` &mdash; Disable diagonal movement (default)
+  * `ALWAYS` &mdash; Allow diagonal movement regardless of obstacles
+  * `ONE_OBSTACLE` &mdash; Allow diagonal movement with at most one obstacle
+  * `NO_OBSTACLES` &mdash; Allow diagonal movement only when there are no obstacles
+
+**Returns** a `Trekker` object for chaining.
+
 ### `Trekker.processNeighbour(fn)`
 #### Arguments
 * **fn(current, neighbour): Boolean** (Function) &mdash; A custom function to use for additional consideration when processing a neighbour tile

@@ -43,6 +43,14 @@
       "stage-1",
       "es2015-rollup"
     ],
+    "plugins": [
+      [
+        "transform-class-properties",
+        {
+          "spec": true
+        }
+      ]
+    ],
     "env": {
       "test": {
         "presets": [

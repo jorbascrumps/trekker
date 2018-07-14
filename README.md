@@ -46,7 +46,7 @@ The goal of the public API is to be chainable in any configuration. A notable ex
 #### Arguments
 * **fn(current, neighbour): Boolean** (Function) &mdash; A custom function to use for additional consideration when processing a neighbour tile
 
-**Returns** a `Boolean` specifying whether or not the neighbour is valid.
+**Returns** a `Trekker` object for chaining.
 
 ### `Trekker.toString()`
 **Returns** a `String` representing a solution path. An example output from the [Usage](#usage) section would be:

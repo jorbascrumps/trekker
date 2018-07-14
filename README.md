@@ -54,3 +54,7 @@ The goal of the public API is to be chainable in any configuration. A notable ex
 '[1,0],[2,0]'
 ```
 _Note: This is primarly a utility for testing._
+
+## TODO
+* [ ] Customize acceptable tiles per instance
+* [ ] Performance optimizations

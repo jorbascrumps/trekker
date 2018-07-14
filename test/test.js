@@ -68,7 +68,7 @@ describe('Diagonal mode', () => {
     it ('Never (default)', () => {
         const expected = '[1,0],[0,0]';
         const actual = new Trekker(grid)
-            .enableDiagonal(Trekker.DIAGONAL_MODE.NEVER)
+            .setDiagonalMode(Trekker.DIAGONAL_MODE.NEVER)
             .search(1, 1, 0, 0)
             .toString();
 
@@ -78,7 +78,7 @@ describe('Diagonal mode', () => {
     it ('Always', () => {
         const expected = '[1,0]';
         const actual = new Trekker(grid)
-            .enableDiagonal(Trekker.DIAGONAL_MODE.ALWAYS)
+            .setDiagonalMode(Trekker.DIAGONAL_MODE.ALWAYS)
             .search(0, 1, 1, 0)
             .toString();
 
@@ -88,7 +88,7 @@ describe('Diagonal mode', () => {
     it ('One obstacle', () => {
         const expected = '[2,0],[3,1],[2,2]';
         const actual = new Trekker(grid)
-            .enableDiagonal(Trekker.DIAGONAL_MODE.ONE_OBSTACLE)
+            .setDiagonalMode(Trekker.DIAGONAL_MODE.ONE_OBSTACLE)
             .search(1, 1, 2, 2)
             .toString();
 
@@ -98,7 +98,7 @@ describe('Diagonal mode', () => {
     it ('No obstacles', () => {
         const expected = '[3,0],[3,1],[3,2],[2,3]';
         const actual = new Trekker(grid)
-            .enableDiagonal(Trekker.DIAGONAL_MODE.NO_OBSTACLES)
+            .setDiagonalMode(Trekker.DIAGONAL_MODE.NO_OBSTACLES)
             .search(2, 0, 2, 3)
             .toString();
 

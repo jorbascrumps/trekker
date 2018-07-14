@@ -27,16 +27,6 @@ describe('Trekker', () => {
         should.equal(actual, expected);
     });
 
-    it('Should path diagonally', () => {
-        const expected = '[1,0]';
-        const actual = new Trekker(grid)
-            .enableDiagonal(true)
-            .search(0, 1, 1, 0)
-            .toString();
-
-        should.equal(actual, expected);
-    });
-
     it('Should avoid walls', () => {
         const expected = '[0,1],[0,2],[1,2],[2,2]';
         const actual = new Trekker(grid)
@@ -64,4 +54,55 @@ describe('Trekker', () => {
 
         should.equal(actual, expected);
     });
+
+});
+
+describe('Diagonal mode', () => {
+    const grid = [
+        [ 1, 1, 1, 1 ],
+        [ 1, 1, 0, 1 ],
+        [ 1, 0, 1, 1 ],
+        [ 1, 1, 1, 1 ],
+    ];
+
+    it ('Never (default)', () => {
+        const expected = '[1,0],[0,0]';
+        const actual = new Trekker(grid)
+            .enableDiagonal(Trekker.DIAGONAL_MODE.NEVER)
+            .search(1, 1, 0, 0)
+            .toString();
+
+        should.equal(actual, expected);
+    });
+
+    it ('Always', () => {
+        const expected = '[1,0]';
+        const actual = new Trekker(grid)
+            .enableDiagonal(Trekker.DIAGONAL_MODE.ALWAYS)
+            .search(0, 1, 1, 0)
+            .toString();
+
+        should.equal(actual, expected);
+    });
+
+    it ('One obstacle', () => {
+        const expected = '[2,0],[3,1],[2,2]';
+        const actual = new Trekker(grid)
+            .enableDiagonal(Trekker.DIAGONAL_MODE.ONE_OBSTACLE)
+            .search(1, 1, 2, 2)
+            .toString();
+
+        should.equal(actual, expected);
+    });
+
+    it ('No obstacles', () => {
+        const expected = '[3,0],[3,1],[3,2],[2,3]';
+        const actual = new Trekker(grid)
+            .enableDiagonal(Trekker.DIAGONAL_MODE.NO_OBSTACLES)
+            .search(2, 0, 2, 3)
+            .toString();
+
+        should.equal(actual, expected);
+    });
+
 });

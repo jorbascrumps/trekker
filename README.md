@@ -48,12 +48,6 @@ The goal of the public API is to be chainable in any configuration. A notable ex
 
 **Returns** a `Boolean` specifying whether or not the neighbour is valid.
 
-### `Trekker.enableDiagonal(value)`
-#### Arguments
-* **value** (Boolean) &mdash; A `Boolean` specifying if diagonal neighbours should be considered. _Note: Any value provided will be cast to a `Boolean`._
-
-**Returns** a Trekker object for chaining.
-
 ### `Trekker.toString()`
 **Returns** a `String` representing a solution path. An example output from the [Usage](#usage) section would be:
 ```
